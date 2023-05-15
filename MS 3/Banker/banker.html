@@ -1,0 +1,274 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel = "stylesheet" href="style.css">
+</head>
+<div class="app">
+	<header class="app-header">
+		<div class="app-header-logo">
+			<div class="logo">
+				<span class="logo-icon">
+					<img src="Apluslogo.png" />
+				</span>
+				<h1 class="logo-title">
+					<span>Aplus</span>
+					<span>Bank</span>
+				</h1>
+			</div>
+		</div>
+		<div class="app-header-navigation">
+			<div class="tabs">
+				<a href="#">
+					FAQ
+				</a>
+				<a href="#">
+					About
+				</a>
+				<a href="#">
+					Contact us
+				</a>
+			</div>
+		</div>
+		<div class="app-header-actions">
+			<button class="user-profile">
+				<span>Mahmoud Tamer</span>
+				<span>
+					<img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
+				</span>
+			</button>
+			<div class="app-header-actions-buttons">
+				<button class="icon-button large">
+					<i class="ph-magnifying-glass"></i>
+				</button>
+				<button class="icon-button large">
+					<i class="ph-bell"></i>
+				</button>
+			</div>
+		</div>
+		<div class="app-header-mobile">
+			<button class="icon-button large">
+				<i class="ph-list"></i>
+			</button>
+		</div>
+
+	</header>
+	<div class="app-body">
+		<div class="app-body-navigation">
+			<nav class="navigation">
+				<a href="#">
+					<i class="ph-browsers"></i>
+					<span>Profile</span>
+				</a>
+				<a href="#">
+					<i class="ph-check-square"></i>
+					<span onclick="toggleTable1()">Credit-card applications</span>
+				</a>
+				<a href="#">
+					<i class="ph-swap"></i>
+					<span onclick="toggleTable2()">Loan applications</span>
+				</a>
+        <a href="#">
+					<i class="ph-check-square"></i>
+					<span onclick="toggleAcc()">Clients' account</span>
+				</a>
+				<a href="#">
+					<i class="ph-file-text"></i>
+					<span onclick="toggleTable()">Theft reports</span>
+				</a>
+				<a href="#">
+					<i class="ph-globe"></i>
+					<span>Announcements</span>
+				</a>
+				<a href="#">
+					<i class="ph-clipboard-text"></i>
+					<span>Send reports</span>
+				</a>
+			</nav>
+			<footer class="footer">
+				<div>
+          <br>
+          <br>
+					Aplus ©<br />
+					All Rights Reserved 2023
+				</div>
+			</footer>
+		</div>
+		<div class="app-body-main-content">
+			<section class="service-section">
+				<div class="service-section-header">
+				<div class="service-section-footer">
+				</div>
+			</section>
+		<div class="app-body-sidebar">
+		</div>
+	</div>
+
+  <div>
+    <table id="myTable">
+      <tr>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Account Number</th>
+          <th>Description</th>
+          <th>Action</th>
+      </tr>
+      <tr>
+          <td>Nada</td>
+          <td>Nadalabib</td>
+          <td>21301232</td>
+          <td>Lost Credit card</td>
+          <td><button class="row-button" onclick="handleRowClick(this)">Handle</button></td>
+        </tr>
+      <tr>
+          <td>Manar</td>
+          <td>Manarhatem</td>
+          <td>45232532</td>
+          <td>Credit card damaged</td>
+          <td><button class="row-button" onclick="handleRowClick(this)">Handle</button></td>
+      </tr>
+</table>
+  </div>
+  <div>
+    <table id="myTable1">
+      <tr>
+          <th>Application No.</th>
+          <th>Name</th>
+          <th>Income</th>
+          <th>Date</th>
+          <th>Action</th>
+      </tr>
+      <tr>
+          <td>123</td>
+          <td>Adham Khaled</td>
+          <td>40000$</td>
+          <td>21-2-2023</td>
+          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+        </tr>
+      <tr>
+          <td>124</td>
+          <td>Abdelrahman Elgohary</td>
+          <td>40000$</td>
+          <td>7-1-2023</td>
+          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+        </tr>
+      <tr>
+        <td>125</td>
+        <td>Magdy Hussien</td>
+        <td>40000$</td>
+        <td>19-4-2023</td>
+        <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+        <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+      </tr>
+</table>
+  </div>
+  <div>
+    <table id="myTable2">
+      <tr>
+          <th>Application No.</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Income</th>
+          <th>Date</th>
+          <th>Action</th>
+      </tr>
+      <tr>
+          <td>123</td>
+          <td>Adham Khaled</td>
+          <td>Personal</td>
+          <td>40000$</td>
+          <td>21-2-2023</td>
+          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+        </tr>
+      <tr>
+          <td>124</td>
+          <td>Abdelrahman Elgohary</td>
+          <td>Car</td>
+          <td>40000$</td>
+          <td>7-1-2023</td>
+          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+        </tr>
+      <tr>
+        <td>125</td>
+        <td>Magdy Hussien</td>
+        <td>Personal</td>
+        <td>40000$</td>
+        <td>19-4-2023</td>
+        <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+        <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+      </tr>
+</table>
+  </div>
+  <div>
+    <input type="text" id="textbox" name="text-box" placeholder="Enter bank account number">
+    <br>
+    <input type="submit" id="submitbutton" value="Submit">
+  </div>
+</div>
+<script>
+  function toggleTable() {
+      var table = document.getElementById("myTable");
+      if (table.style.display === "none") {
+        var table1 = document.getElementById("myTable1");
+        var table2 = document.getElementById("myTable2");
+          table1.style.display = "none";
+          table2.style.display = "none";
+          table.style.display = "table";
+      } else {
+          table.style.display = "none";
+      }
+ }
+ function toggleTable1() {
+      var table = document.getElementById("myTable1");
+      if (table.style.display === "none") {
+        var table1 = document.getElementById("myTable");
+        var table2 = document.getElementById("myTable2");
+          table1.style.display = "none";
+          table2.style.display = "none";
+          table.style.display = "table";
+      } else {
+          table.style.display = "none";
+      }
+ }
+ function toggleTable2() {
+      var table = document.getElementById("myTable2");
+      if (table.style.display === "none") {
+        var table1 = document.getElementById("myTable");
+        var table2 = document.getElementById("myTable1");
+          table1.style.display = "none";
+          table2.style.display = "none";
+          table.style.display = "table";
+      } else {
+          table.style.display = "none";
+      }
+ }
+ function toggleAcc() {
+        var box = document.getElementById("textbox");
+        var submit = document.getElementById("submitbutton");
+      if(box.style.display==="none" && submit.style.display==="none"){
+        var table1 = document.getElementById("myTable");
+        var table2 = document.getElementById("myTable1");
+        var table3 = document.getElementById("myTable2");
+          table1.style.display = "none";
+          table2.style.display = "none";
+          table3.style.display = "none";
+          box.style.display= "inline-block";
+          submit.style.display= "inline-block";
+      }
+      else {
+        textbox.style.display="none";
+        submit.style.display="none";
+      }
+      
+ }
+ function handleRowClick(button) {
+            var row = button.parentNode.parentNode;
+            // Do something with the row or perform an action
+            console.log("Row clicked:", row);
+}
+</script>
