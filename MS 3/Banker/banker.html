@@ -104,7 +104,31 @@
 		<div class="app-body-sidebar">
 		</div>
 	</div>
-
+  <div>
+   
+    <div class="information" id = "try" >
+      <div>
+        <span class="label">Name:</span> Adham Khaled
+      </div>
+      <div>
+        <span class="label">Address:</span> Cairo 5th settlement
+      </div>
+      <div>
+        <span class="label">Martial Status:</span> Single
+      </div>
+      <div>
+        <span class="label">Bank Account:</span> 123
+      </div>
+      <div>
+        <span class="label">Credit Card Number:</span> 321
+      </div>
+      <div>
+        <span class="label">Balance on Account:</span> $50,000
+      </div>
+      <div>
+        <span class="label">Balance on Credit Card:</span> $6,000
+      </div>
+    </div>
   <div>
     <table id="myTable">
       <tr>
@@ -205,20 +229,34 @@
 </table>
   </div>
   <div>
+    <form id="myForm">
     <input type="text" id="textbox" name="text-box" placeholder="Enter bank account number">
     <br>
     <input type="submit" id="submitbutton" value="Submit">
+    </form>
   </div>
+
+  
+
 </div>
+
 <script>
   function toggleTable() {
       var table = document.getElementById("myTable");
+      
       if (table.style.display === "none") {
+        var box = document.getElementById("textbox");
+        var submit = document.getElementById("submitbutton");
         var table1 = document.getElementById("myTable1");
         var table2 = document.getElementById("myTable2");
+        var clientinf= document.getElementById("try");
           table1.style.display = "none";
           table2.style.display = "none";
+          textbox.style.display="none";
+        submit.style.display="none";
+        clientinf.style.display = "none" ;
           table.style.display = "table";
+          
       } else {
           table.style.display = "none";
       }
@@ -226,23 +264,37 @@
  function toggleTable1() {
       var table = document.getElementById("myTable1");
       if (table.style.display === "none") {
+        var box = document.getElementById("textbox");
+        var submit = document.getElementById("submitbutton");
         var table1 = document.getElementById("myTable");
         var table2 = document.getElementById("myTable2");
+        var clientinf= document.getElementById("try");
           table1.style.display = "none";
           table2.style.display = "none";
+          textbox.style.display="none";
+        submit.style.display="none";
+        clientinf.style.display = "none" ;
           table.style.display = "table";
       } else {
           table.style.display = "none";
       }
  }
  function toggleTable2() {
+  
       var table = document.getElementById("myTable2");
       if (table.style.display === "none") {
+        var box = document.getElementById("textbox");
+        var submit = document.getElementById("submitbutton");
         var table1 = document.getElementById("myTable");
         var table2 = document.getElementById("myTable1");
+        var clientinf= document.getElementById("try");
           table1.style.display = "none";
           table2.style.display = "none";
+          textbox.style.display="none";
+         submit.style.display="none";
+         clientinf.style.display = "none" ;
           table.style.display = "table";
+
       } else {
           table.style.display = "none";
       }
@@ -254,9 +306,11 @@
         var table1 = document.getElementById("myTable");
         var table2 = document.getElementById("myTable1");
         var table3 = document.getElementById("myTable2");
+        var clientinf= document.getElementById("try");
           table1.style.display = "none";
           table2.style.display = "none";
           table3.style.display = "none";
+          clientinf.style.display = "none" ;
           box.style.display= "inline-block";
           submit.style.display= "inline-block";
       }
@@ -266,6 +320,20 @@
       }
       
  }
+ document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var inputValue = document.getElementById("textbox").value;
+            var box = document.getElementById("textbox");
+             var submit = document.getElementById("submitbutton");
+
+            if (inputValue === "123") {
+                document.getElementById("try").style.display = "block";
+                textbox.style.display="none";
+                 submit.style.display="none";
+
+            }
+        });
  function handleRowClick(button) {
             var row = button.parentNode.parentNode;
             // Do something with the row or perform an action

@@ -873,6 +873,10 @@ th, td {
   padding: 6px 12px;
   cursor: pointer;
 }
+.table-container {
+	display: none;
+	margin-top: 20px;
+}
 
 input[type="text"] {
 	width: 70%;
@@ -885,7 +889,7 @@ input[type="text"] {
 	font-size: 16px;
 	display: none;
 	margin-right: 10px; /* Add a margin to move the element to the left */
-	transform: translate(-670px, -315px); /* Move the element more precisely */
+	transform: translate(-750px, -20px); /* Move the element more precisely */
   }
   
     
@@ -900,7 +904,24 @@ input[type="text"] {
 		font-size: 16px;
 		display: none;
 		margin-right: 10px; /* Add a margin to move the element to the left */
-		transform: translate(-670px, -315px); /* Move the element more precisely */
+		transform: translate(-750px, -25px); /* Move the element more precisely */
 	  }
+	  .information {
+		font-family: 'Trebuchet MS';
+		width: 400px; /* Adjust the width as desired */
+		margin: 0 auto;
+		padding: 20px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		height: 270px;
+		transform: translate(-750px, -25px);
+		display: none;
+	  }
+	  
+	  .label {
+		font-weight: bold;
+	  }
+	  
+	 
   
  
