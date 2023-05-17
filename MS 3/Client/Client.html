@@ -3,9 +3,267 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="styletry.css">
     <title>Document</title>
 </head>
-<body>
-    
-</body>
+<div class="app">
+    <header class="app-header">
+        <div class="app-header-logo">
+            <div class="logo">
+                <span class="logo-icon">
+                    <img src="Apluslogo.png" />
+                </span>
+                <h1 class="logo-title">
+                    <span>Aplus</span>
+                    <span>Bank</span>
+                </h1>
+            </div>
+        </div>
+        <div class="app-header-navigation">
+            <div class="tabs">
+                <a href="#">
+                    FAQ
+                </a>
+                <a href="#">
+                    About
+                </a>
+                <a href="#">
+                    Contact us
+                </a>
+            </div>
+        </div>
+        <div class="app-header-actions">
+            <button class="user-profile">
+                <span>Mahmoud Tamer</span>
+                <span>
+                    <img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
+                </span>
+            </button>
+            <div class="app-header-actions-buttons">
+                <button class="icon-button large">
+                    <i class="ph-magnifying-glass"></i>
+                </button>
+                <button class="icon-button large">
+                    <i class="ph-bell"></i>
+                </button>
+            </div>
+        </div>
+        <div class="app-header-mobile">
+            <button class="icon-button large">
+                <i class="ph-list"></i>
+            </button>
+        </div>
+
+    </header>
+    <div class="app-body">
+        <div class="app-body-navigation">
+            <nav class="navigation">
+                <a href="#">
+                    <i class="ph-browsers"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#" onclick="SelectBankAccount()">
+                    <i class="ph-check-square"></i>
+                    <span>Bank Account</span>
+                </a>
+                <a href="#">
+                    <i class="ph-swap"></i>
+                    <span onclick="SelectPayment()">Payment</span>
+                </a>
+                <a href="#">
+                    <i class="ph-check-square"></i>
+                    <span onclick="SelectTransaction()">Transactions</span>
+                </a>
+                <a href="#" >
+                    <i class="ph-check-square"></i>
+                    <span onclick="SelectTransferMoney()" >Transfer Money</span>
+                </a>
+                <a href="#">
+                    <i class="ph-file-text"></i>
+                    <span onclick="SelectApplication()">Application</span>
+                </a>
+                <a href="#">
+                    <i class="ph-globe"></i>
+                    <span onclick="SelectPoints()">Points</span>
+                </a>
+                <a href="#">
+                    <i class="ph-globe"></i>
+                    <span onclick="SelectReminders()">Reminders</span>
+                </a>
+                <a href="#">
+                    <i class="ph-clipboard-text"></i>
+                    <span onclick="SelectHelp()">Help & Support</span>
+                </a>
+            </nav>
+            <footer class="footer">
+                <div>
+          <br>
+          <br>
+          <br>
+                    Aplus ©<br />
+                    All Rights Reserved 2023
+                </div>
+            </footer>
+        </div>
+        <div class="app-body-main-content">
+            <section class="service-section">
+                <div class="service-section-header">
+                <div class="service-section-footer">
+                </div>
+            </section>
+        <div class="app-body-sidebar">
+        </div>
+    </div>
+
+  <div>
+    <table id="myTable">
+      <tr>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Account Number</th>
+          <th>Description</th>
+          <th>Action</th>
+      </tr>
+      <tr>
+          <td>Nada</td>
+          <td>Nadalabib</td>
+          <td>21301232</td>
+          <td>Lost Credit card</td>
+          <td><button class="row-button" onclick="handleRowClick(this)">Handle</button></td>
+        </tr>
+      <tr>
+          <td>Manar</td>
+          <td>Manarhatem</td>
+          <td>45232532</td>
+          <td>Credit card damaged</td>
+          <td><button class="row-button" onclick="handleRowClick(this)">Handle</button></td>
+      </tr>
+</table>
+  </div>
+  <div>
+    <table id="myTable1">
+      <tr>
+          <th>Application No.</th>
+          <th>Name</th>
+          <th>Income</th>
+          <th>Date</th>
+          <th>Action</th>
+      </tr>
+      <tr>
+          <td>123</td>
+          <td>Adham Khaled</td>
+          <td>40000$</td>
+          <td>21-2-2023</td>
+          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+        </tr>
+      <tr>
+          <td>124</td>
+          <td>Abdelrahman Elgohary</td>
+          <td>40000$</td>
+          <td>7-1-2023</td>
+          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+        </tr>
+      <tr>
+        <td>125</td>
+        <td>Magdy Hussien</td>
+        <td>40000$</td>
+        <td>19-4-2023</td>
+        <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+        <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+      </tr>
+</table>
+  </div>
+  <div>
+    <table id="myTable2">
+      <tr>
+          <th>Application No.</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Income</th>
+          <th>Date</th>
+          <th>Action</th>
+      </tr>
+      <tr>
+          <td>123</td>
+          <td>Adham Khaled</td>
+          <td>Personal</td>
+          <td>40000$</td>
+          <td>21-2-2023</td>
+          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+        </tr>
+      <tr>
+          <td>124</td>
+          <td>Abdelrahman Elgohary</td>
+          <td>Car</td>
+          <td>40000$</td>
+          <td>7-1-2023</td>
+          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+        </tr>
+      <tr>
+        <td>125</td>
+        <td>Magdy Hussien</td>
+        <td>Personal</td>
+        <td>40000$</td>
+        <td>19-4-2023</td>
+        <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+        <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+      </tr>
+</table>
+  </div>
+  <div>
+    <input type="text" id="textbox" name="text-box" placeholder="Enter bank account number">
+    <br>
+    <input type="submit" id="submitbutton" value="Submit">
+  </div>
+  <div id = "contt" class="containerForTransaction">
+    <button id="creditCardBtn">Credit Card</button>
+    <button id="bankAccountBtn">Bank Account</button>
+  </div>
+
+  <div id="trans2" class=" containerForTransfer">
+    <input type="text" id="textbox" name="text-box" placeholder="Enter bank account number">
+    <br>
+    <input type="text" id="textbox" name="text-box" placeholder="Enter bank account number of reciver">
+    <br>
+    <input type="text" id="textbox" name="text-box" placeholder="Enter amount of money">
+    <br>
+    <label>
+        <input type="checkbox" name="choice" value="domestic">
+        Domestic
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="choice" value="internal">
+        Internal
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="choice" value="international">
+        International
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="choice" value="own">
+        Own
+    </label>
+    <input type="submit" id="submitbutton" value="Submit">
+  </div>
+</div>
+    <script>
+    function SelectTransaction(){
+        var container = document.getElementById("contt");
+            container.style.display = (container.style.display === "none") ? "flex" : "none";
+    }
+    function SelectTransferMoney(){
+        var container = document.getElementById("trans2");
+            container.style.display = (container.style.display === "none") ? "flex" : "none";
+    }
+    </script>
+
+
+
 </html>
