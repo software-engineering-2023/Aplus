@@ -60,7 +60,7 @@
             <nav class="navigation">
                 <a href="#">
                     <i class="ph-browsers"></i>
-                    <span>Profile</span>
+                    <span onclick="ChooseProfile()">Profile</span>
                 </a>
                 <a href="#" onclick="SelectBankAccount()">
                     <i class="ph-check-square"></i>
@@ -252,8 +252,55 @@
     </label>
     <input type="submit" id="submitbutton" value="Submit">
   </div>
+  <div id="try" class="information">
+      <span class="label">Name:</span> Adham Khaled
+      <br>
+      <span class="label">Address:</span> Cairo 5th settlement
+      <br>
+      <span class="label">Martial Status:</span> Single
+      <br>
+      <span class="label">Bank Account:</span> 123
+      <br>
+
+      <span class="label">Credit Card Number:</span> 321
+      <br>
+
+      <span class="label">Balance on Account:</span> $50,000
+      <br>
+
+      <span class="label">Balance on Credit Card:</span> $6,000
+      <br>
+  </div>
+  <div id="Application" class = "ApplyForApplication">
+    <label>
+      <input type="checkbox" name="creditCard" value="CreditCard">
+      Credit card
+    </label>
+    <br>
+    <label>
+      <input type="checkbox" name="loan" value="Loan">
+      Loan
+    </label>
+    <br>
+    <br>
+    <input type="text" id="nameInput" name="text-box" placeholder="Enter your name">
+    <br>
+    <input type="text" id="amountInput" name="text-box" placeholder="Enter amount of money">
+    <br>
+    <input type="text" id="accountInput" name="text-box" placeholder="Enter bank account number">
+    <br>
+    <button id = "submitbuttonApply" class="ButtonApplyApplication">Apply</button>
+
+  </div>
+  
 </div>
     <script>
+
+    function ChooseProfile(){
+        var container = document.getElementById("try");
+        container.style.display = (container.style.display === "none") ? "block" : "none";
+    }
+
     function SelectTransaction(){
         var container = document.getElementById("contt");
             container.style.display = (container.style.display === "none") ? "flex" : "none";
@@ -262,6 +309,22 @@
         var container = document.getElementById("trans2");
             container.style.display = (container.style.display === "none") ? "flex" : "none";
     }
+
+    function SelectApplication(){
+        var container = document.getElementById("Application");
+        container.style.display = (container.style.display === "none") ? "block" : "none";
+        var nameInput = document.getElementById("nameInput");
+        var amountInput = document.getElementById("amountInput");
+        var accountInput = document.getElementById("accountInput");
+        var ApplyInput = document.getElementById("submitbuttonApply");
+  
+        nameInput.style.display = (container.style.display === "none") ? "none" : "inline-block";
+        amountInput.style.display = (container.style.display === "none") ? "none" : "inline-block";
+        accountInput.style.display = (container.style.display === "none") ? "none" : "inline-block";
+        ApplyInput.style.display = (container.style.display === "none") ? "none" : "inline-block";
+
+    }
+
     </script>
 
 

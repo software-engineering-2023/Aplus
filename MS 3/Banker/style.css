@@ -890,7 +890,7 @@ input[type="text"] {
 	display: none;
 	margin-right: 10px; /* Add a margin to move the element to the left */
 	transform: translate(-750px, -20px); /* Move the element more precisely */
-  }
+}
   
     
     /* Style the submit button */

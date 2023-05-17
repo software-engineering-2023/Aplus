@@ -875,17 +875,17 @@ th, td {
 }
 
 input[type="text"] {
-    width: 70%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    display: none;
-    margin-right: 10px; /* Add a margin to move the element to the left */
-    transform: translate(-670px, -315px); /* Move the element more precisely */
+    position: relative;
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  display: none;
+  margin-right: 10px;
   }
   
     
@@ -933,4 +933,39 @@ input[type="text"] {
     transform: translate(-52%,500%);
 }
 
+.information {
+    font-family: 'Trebuchet MS';
+    width: 400px; /* Adjust the width as desired */
+    margin: 0 auto;
+    padding: 20px;
+    border: 0px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 270px;
+    transform: translate(150px, -400px);
+    display: none;
+  }
+
+  .ApplyForApplication{
+    font-family: 'Trebuchet MS';
+    width: 600px; /* Adjust the width as desired */
+    margin: 0 auto;
+    padding: 20px;
+    border: 0px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 400px;
+    transform: translate(150px, -400px);
+    display: none;
+  }
+
+.ButtonApplyApplication{
+    display: none;
+    background: #222271;
+    color: #bdbbb7;
+
+
+  }
+
+
+
+  
 
