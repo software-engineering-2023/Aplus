@@ -168,24 +168,24 @@
           <td>Adham Khaled</td>
           <td>40000$</td>
           <td>21-2-2023</td>
-          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
-          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+          <td><button class="row-button" id ="approve1" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+          <td><button class="row-button" id ="reject1" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
         </tr>
       <tr>
           <td>124</td>
           <td>Abdelrahman Elgohary</td>
           <td>40000$</td>
           <td>7-1-2023</td>
-          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
-          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+          <td><button class="row-button" id ="approve2" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+          <td><button class="row-button" id ="reject2" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
         </tr>
       <tr>
         <td>125</td>
         <td>Magdy Hussien</td>
         <td>40000$</td>
         <td>19-4-2023</td>
-        <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
-        <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+        <td><button class="row-button" id ="approve3" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+        <td><button class="row-button" id ="reject3" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
       </tr>
 </table>
   </div>
@@ -205,8 +205,8 @@
           <td>Personal</td>
           <td>40000$</td>
           <td>21-2-2023</td>
-          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
-          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+          <td><button class="row-button" id ="app1" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+          <td><button class="row-button"  id ="rej1" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
         </tr>
       <tr>
           <td>124</td>
@@ -214,8 +214,8 @@
           <td>Car</td>
           <td>40000$</td>
           <td>7-1-2023</td>
-          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
-          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+          <td><button class="row-button"  id ="app2" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+          <td><button class="row-button"   id ="rej2" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
         </tr>
       <tr>
         <td>125</td>
@@ -223,8 +223,8 @@
         <td>Personal</td>
         <td>40000$</td>
         <td>19-4-2023</td>
-        <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
-        <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+        <td><button class="row-button"  id ="app3" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
+        <td><button class="row-button"  id ="rej3"style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
       </tr>
 </table>
   </div>
@@ -279,6 +279,40 @@
           table.style.display = "none";
       }
  }
+ document.getElementById("approve1").addEventListener("click", function() {
+  alert("Approved");
+});
+document.getElementById("reject1").addEventListener("click", function() {
+  alert("rejected");
+});
+document.getElementById("approve2").addEventListener("click", function() {
+  alert("Approved");
+});
+document.getElementById("reject2").addEventListener("click", function() {
+  alert("rejected");
+});
+document.getElementById("approve3").addEventListener("click", function() {
+  alert("Approved");
+});
+document.getElementById("reject3").addEventListener("click", function() {
+  alert("rejected");
+});
+
+
+
+
+var acceptButtons = document.getElementsByClassName("row-button");
+
+// Loop through all accept buttons and attach event listeners
+for (var i = 0; i < acceptButtons.length; i++) {
+  acceptButtons[i].addEventListener("click", function() {
+    var row = this.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+  });
+}
+
+
+
  function toggleTable2() {
   
       var table = document.getElementById("myTable2");
@@ -299,6 +333,25 @@
           table.style.display = "none";
       }
  }
+ document.getElementById("app1").addEventListener("click", function() {
+  alert("Approved");
+});
+document.getElementById("rej1").addEventListener("click", function() {
+  alert("rejected");
+});
+document.getElementById("app2").addEventListener("click", function() {
+  alert("Approved");
+});
+document.getElementById("rej2").addEventListener("click", function() {
+  alert("rejected");
+});
+document.getElementById("app3").addEventListener("click", function() {
+  alert("Approved");
+});
+document.getElementById("rej3").addEventListener("click", function() {
+  alert("rejected");
+});
+
  function toggleAcc() {
         var box = document.getElementById("textbox");
         var submit = document.getElementById("submitbutton");
