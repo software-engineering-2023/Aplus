@@ -114,6 +114,9 @@
         <span class="label">Address:</span> Cairo 5th settlement
       </div>
       <div>
+        <span class="label">Birth Date:</span> 1-1-1965
+      </div>
+      <div>
         <span class="label">Martial Status:</span> Single
       </div>
       <div>
@@ -128,7 +131,43 @@
       <div>
         <span class="label">Balance on Credit Card:</span> $6,000
       </div>
+      <input onclick="toggleTrans()" type="trans" id="trans" value="Show Transactions">
     </div>
+
+    <div class="Transac">
+      <table id="myTable3">
+        <tr>
+            <th>Transaction ID</th>
+            <th>Type</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Bill</td>
+            <td>3-4-2023</td>
+            <td>100$</td>
+            <td>Completed</td>
+          </tr>
+        <tr>
+            <td>2</td>
+            <td>Transfer</td>
+            <td>9-4-2023</td>
+            <td>400$</td>
+            <td>Completed</td>
+          </tr>
+        <tr>
+          <td>3</td>
+          <td>Payment</td>
+          <td>10-4-2023</td>
+          <td>50$</td>
+          <td>Pending</td>
+          <td><input onclick="toggleTrans()" type="hide" id="hide" value="Hide Transactions"></td>
+        </tr>
+  </table>
+</div>
+    
   <div>
     <table id="myTable">
       <tr>
@@ -241,6 +280,25 @@
 </div>
 
 <script>
+
+function toggleTrans() {
+        var table = document.getElementById("myTable3");
+        var info = document.getElementById("try");
+        var transButton = document.getElementById("trans");
+        var hidebutton = document.getElementById("hide");
+       if(table.style.display==="none"){
+        info.style.display = "none";
+        table.style.display="table";
+        hidebutton.style.display="block";
+      }
+      else {
+        hidebutton.style.display="none";
+        table.style.display="none";
+        info.style.display="block";
+        transButton.style.display="block";
+}
+}
+
   function toggleTable() {
       var table = document.getElementById("myTable");
       
@@ -379,11 +437,13 @@ document.getElementById("rej3").addEventListener("click", function() {
             var inputValue = document.getElementById("textbox").value;
             var box = document.getElementById("textbox");
              var submit = document.getElementById("submitbutton");
-
+             var transButton = document.getElementById("trans");
             if (inputValue === "123") {
                 document.getElementById("try").style.display = "block";
                 textbox.style.display="none";
-                 submit.style.display="none";
+                submit.style.display="none";
+                transButton.style.display="block";
+
 
             }
         });
