@@ -129,3 +129,16 @@ input[type=checkbox]:checked + label {
   color: #f00;
   font-style: normal;
 }
+button {
+    padding: 10px 20px;
+    background-color: #B29579;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transform: translate(1430px,-280px);
+    width: 100px;
+}
+  
+  button:hover {
+    background-color: #B29579;
+  }
