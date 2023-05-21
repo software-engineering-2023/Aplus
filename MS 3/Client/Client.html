@@ -66,9 +66,9 @@
                     <i class="ph-check-square"></i>
                     <span>Bank Account</span>
                 </a>
-                <a href="#">
+                <a href="#" onclick="SelectPayment()">
                     <i class="ph-swap"></i>
-                    <span onclick="SelectPayment()">Payment</span>
+                    <span >Payment</span>
                 </a>
                 <a href="#">
                     <i class="ph-check-square"></i>
@@ -82,9 +82,9 @@
                     <i class="ph-file-text"></i>
                     <span onclick="SelectApplication()">Application</span>
                 </a>
-                <a href="#">
+                <a href="#" onclick="SelectPoints()">
                     <i class="ph-globe"></i>
-                    <span onclick="SelectPoints()">Points</span>
+                    <span>Points</span>
                 </a>
                 <a href="#">
                     <i class="ph-globe"></i>
@@ -140,40 +140,37 @@
       </tr>
 </table>
   </div>
-  <div>
-    <table id="myTable1">
+  <div >
+    <table id="Paymenttable">
       <tr>
-          <th>Application No.</th>
+          <th>Payment No.</th>
           <th>Name</th>
-          <th>Income</th>
+          <th>total cost</th>
           <th>Date</th>
-          <th>Action</th>
+          <th>Address</th>
       </tr>
       <tr>
           <td>123</td>
           <td>Adham Khaled</td>
           <td>40000$</td>
           <td>21-2-2023</td>
-          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
-          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+          <td>rehab 2-group 119-4-41</td>
         </tr>
       <tr>
           <td>124</td>
           <td>Abdelrahman Elgohary</td>
           <td>40000$</td>
-          <td>7-1-2023</td>
-          <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
-          <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+          <td>25-10-2001</td>
+          <td>mobil lotus 18-425</td>
         </tr>
       <tr>
         <td>125</td>
         <td>Magdy Hussien</td>
         <td>40000$</td>
         <td>19-4-2023</td>
-        <td><button class="row-button" style="background-color: lightgreen;" onclick="handleRowClick(this)">Approve</button></td>
-        <td><button class="row-button" style="background-color: lightcoral;" onclick="handleRowClick(this)">Reject</button></td>
+        <td>fifth settlement 5-4-42</td>
       </tr>
-</table>
+    </table>
   </div>
   <div>
     <table id="myTable2">
@@ -225,31 +222,27 @@
   </div>
 
   <div id="trans2" class=" containerForTransfer">
-    <input type="text" id="textbox" name="text-box" placeholder="Enter bank account number">
-    <br>
-    <input type="text" id="textbox" name="text-box" placeholder="Enter bank account number of reciver">
-    <br>
-    <input type="text" id="textbox" name="text-box" placeholder="Enter amount of money">
-    <br>
     <label>
         <input type="checkbox" name="choice" value="domestic">
         Domestic
-      </label>
-      <br>
-      <label>
+    </label>
+    <label>
         <input type="checkbox" name="choice" value="internal">
         Internal
-      </label>
-      <br>
-      <label>
-        <input type="checkbox" name="choice" value="international">
+    </label>
+    <label>
+        <input type="checkbox" id="internationalcheckbox" name="choice" value="international">
         International
-      </label>
-      <br>
-      <label>
+    </label>
+    <label>
         <input type="checkbox" name="choice" value="own">
         Own
     </label>
+    <input type="text" id="accountnumbox" name="text-box" placeholder="Enter bank account number">
+    <input type="text" id="otheraccountnumbox" name="text-box" placeholder="Enter bank account number of reciver">
+    <input type="text" id="moneybox" name="text-box" placeholder="Enter amount of money">
+    <input type="text" id="IBAN" name="text-box" placeholder="Enter IBAN please">
+    <input type="text" id="SWIFT" name="text-box" placeholder="Enter SWIFT please">
     <input type="submit" id="submitbutton" value="Submit">
   </div>
   <div id="try" class="information">
@@ -292,6 +285,14 @@
     <button id = "submitbuttonApply" class="ButtonApplyApplication">Apply</button>
 
   </div>
+
+  <div class="redeem-points" id = "redeem-points-id">
+    <h2>Redeem Points</h2>
+    <p>You have <span id="points">1000</span> points available.</p>
+    <form action="#" method="post">
+      <button type="submit" id="redeembtn">Redeem</button>
+    </form>
+  </div>
   
 </div>
     <script>
@@ -308,15 +309,42 @@
     function SelectTransferMoney(){
         var container = document.getElementById("trans2");
             container.style.display = (container.style.display === "none") ? "flex" : "none";
+        var nameInput = document.getElementById("accountnumbox");
+        var amountInput = document.getElementById("otheraccountnumbox");
+        var accountInput = document.getElementById("accountInput");
+        var ApplyInput = document.getElementById("submitbuttonApply");
+        var international = document.getElementById("internationalcheckbox");
+        var IBAN = document.getElementById("IBAN");
+        var SWIFT = document.getElementById("SWIFT");
+  
+        nameInput.style.display = (container.style.display === "none") ? "none" : "inline-block";
+        amountInput.style.display = (container.style.display === "none") ? "none" : "inline-block";
+        accountInput.style.display = (container.style.display === "none") ? "none" : "inline-block";
+        ApplyInput.style.display = (container.style.display === "none") ? "none" : "inline-block";
+
+        international.addEventListener("change", function() {
+        if (myCheckbox.checked) {
+            IBAN.style.display = (container.style.display === "none") ? "none" : "inline-block";
+            SWIFT.style.display = (container.style.display === "none") ? "none" : "inline-block";
+            console.log("Checkbox is checked");
+
+            // Perform additional actions when the checkbox is checked
+        } else {
+            console.log("Checkbox is unchecked");
+            // Perform additional actions when the checkbox is unchecked
+            }
+        });
     }
+    
 
     function SelectApplication(){
         var container = document.getElementById("Application");
         container.style.display = (container.style.display === "none") ? "block" : "none";
         var nameInput = document.getElementById("nameInput");
         var amountInput = document.getElementById("amountInput");
-        var accountInput = document.getElementById("accountInput");
+        var accountInput = document.getElementById("moneybox");
         var ApplyInput = document.getElementById("submitbuttonApply");
+
   
         nameInput.style.display = (container.style.display === "none") ? "none" : "inline-block";
         amountInput.style.display = (container.style.display === "none") ? "none" : "inline-block";
@@ -324,6 +352,30 @@
         ApplyInput.style.display = (container.style.display === "none") ? "none" : "inline-block";
 
     }
+    function SelectPayment(){
+        var container = document.getElementById("Paymenttable");
+       
+        container.style.display = (container.style.display === "none") ? "table" : "none";
+
+    }
+
+    function SelectPoints(){
+        var containerPoints = document.getElementById("redeem-points-id");
+        //container.style.display = (container.style.display === "none") ? "block" : "none";
+        if (containerPoints.style.display === "none") {
+            containerPoints.style.display = "block";
+        } else {
+            containerPoints.style.display = "none";
+        }
+    }
+
+    document.getElementById("redeembtn").addEventListener("click", function() {
+        alert("redeem points process is completed");
+    });
+
+
+
+
 
     </script>
 
