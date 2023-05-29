@@ -1,0 +1,36 @@
+ .u-section-1 {
+  background-image: linear-gradient(white, #999999);
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 840px;
+}
+
+.u-section-1 .u-text-1 {
+  font-style: italic;
+  margin: 194px 93px 0;
+}
+
+.u-section-1 .u-btn-1 {
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  background-image: none;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: Epilogue;
+  font-weight: 700;
+  margin: 101px auto 60px;
+  padding: 25px 44px 26px;
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-text-1 {
+    margin-right: auto;
+    margin-left: -98px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-left: -98px;
+    margin-right: -98px;
+  }
+}
