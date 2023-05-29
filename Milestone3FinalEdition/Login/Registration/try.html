@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <script type="text/javascript">
+    function checkAuthentication() {
+      var urlParams = new URLSearchParams(window.location.search);
+      var isAdmin = urlParams.get("isAdmin");
+
+      if (isAdmin === "true") { // Check if the URL parameter indicates admin authentication
+        setTimeout(function() {
+        window.location.href = "../../Admin/Admin.html";
+      }, 0); // Redirect to admin page
+      } else {
+        alert("You are not authorized as an admin!"); // Show an error message if not authenticated
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Login</h1>
+  <script type="text/javascript">
+    checkAuthentication(); // Automatically check admin authentication on page load
+  </script>
+</body>
+</html>

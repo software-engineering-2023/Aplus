@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv = " X-UA-Compatible" content="IE=edge">
+        <meta name = "viewport" content="width=device-width,initial-scale =1.0">
+        <title>
+            Website with login and registration
+        </title>
+       
+
+        <link rel = "stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h2 class = "logo">logo</h2>
+            <nav class = "navigation">
+            
+                <a href="#">About</a>
+                <a href="#">Terms and conditions</a>
+                <a href="#">Contact</a>
+                <button class="btnLogin">  Login  </button>
+            </nav>
+        </header>
+        <div class="wrapper">
+            <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action = "#">
+                    
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                        <input type="text" id = "Username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" id ="password" required>
+                        <label>password</label>
+                    </div>
+                    <div class="remeber-forgot">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn" onclick="auth()">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action = "#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="accessibility"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Full name</label>
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                        <input type="text"  required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password"  required>
+                        <label>password</label>
+                    </div>
+                    <div class="remeber-forgot">
+                        <label><input type="checkbox"> I accept to terms and conditions</label>
+                        
+                    </div>
+                    <button type="submit" class="btn" onclick = "ReturnToLogin()">Register </button>
+                    <div class="login-register">
+                        <p>Already have an account <a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+
+            
+        </div>
+        
+
+        <script src = 'script.js'></script>
+
+
+        <script>
+            function ReturnToLogin() {
+                var fullName = document.getElementById('full-name').value;
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+               // Check if any field is empty
+               if (fullName === '' || username === '' || password === '') {
+                alert('Please fill in all fields');
+               return; // Prevent redirection
+               }
+              // Show the login form and hide the registration form
+              var loginForm = document.querySelector('.form-box.login');
+              var registerForm = document.querySelector('.form-box.register');
+          
+              loginForm.style.display = 'block';
+              registerForm.style.display = 'none';
+            }
+          </script>
+          
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <scrip t nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+
+
+</html>
