@@ -1,0 +1,95 @@
+<section class="u-align-center u-clearfix u-gradient u-section-1" id="sec-1112">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h3 class="u-custom-font u-font-merriweather u-text u-text-default u-text-1">Announcements</h3>
+      <div class="u-align-center u-table u-table-responsive u-table-1">
+        <table class="u-table-entity u-table-entity-1">
+          <colgroup>
+            <col width="26.5%">
+            <col width="24.1%">
+            <col width="49.4%">
+          </colgroup>
+          <thead class="u-custom-color-1 u-table-header u-table-header-1">
+            <tr style="height: 40px;">
+              <th class="u-align-center u-border-3 u-border-custom-color-2 u-table-cell u-table-cell-1">Announcement ID</th>
+              <th class="u-align-center u-border-3 u-border-custom-color-2 u-table-cell u-table-cell-2">Date</th>
+              <th class="u-align-center u-custom-color-1 u-table-cell u-table-cell-3">Description</th>
+            </tr>
+          </thead>
+          <tbody class="u-table-body u-text-custom-color-1 u-table-body-1">
+            <tr style="height: 175px;">
+              <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-4">37583</td>
+              <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-5">1 JUNE 2023</td>
+              <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-6">New Security Feature: Exciting news! We have introduced an enhanced security feature to safeguard your online banking experience. Starting [5 June], a two-factor authentication process will be implemented for additional account protection. Please ensure your contact information is up to date to receive the necessary verification codes.</td>
+            </tr>
+            <tr style="height: 97px;">
+              <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-7">63412</td>
+              <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-8">1 JUNE 2023</td>
+              <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-9">Scheduled Maintenance: Attention valued clients, please be advised that our online banking system will undergo scheduled maintenance on [28 June] from [12:00 PM] to [3:00 PM]. During this period, certain services may be temporarily unavailable. We apologize for any inconvenience caused and appreciate your patience. Rest assured, this maintenance aims to improve the overall system performance.</td>
+            </tr>
+            <tr style="height: 97px;">
+              <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-10">23111</td>
+              <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-11">24 MAY 2023</td>
+              <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-12">Mobile App Update: Attention mobile banking users! We are            excited to announce the release of a new update for our mobile banking app. This update includes enhanced functionality, improved user interface, and bug fixes. Please visit your app store to download the latest version for an even better banking experience on your mobile devices.</td>
+            </tr>
+            <tr style="height: 97px;">
+              <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-13">93287</td>
+              <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-14">10 APRIL 2023</td>
+              <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-15">Fraud Awareness Reminder: Dear clients, protecting your financial information is our top priority. Please remain vigilant against fraud attempts, such as phishing emails, suspicious phone calls, or fraudulent websites. Remember, we will never ask for your confidential information via email or phone. Stay informed and report any suspicious activities to our customer support team immediately.</td>
+            </tr>
+            
+            <!-- Add Row -->
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <tr>
+    <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-16">
+      <input type="text" id="announcementId" placeholder="Announcement ID">
+    </td>
+    <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-17">
+      <input type="text" id="date" placeholder="Date">
+    </td>
+    <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-18">
+      <input type="text" id="description" placeholder="Description">
+    </td>
+    <td class="u-border-4 u-border-grey-80 u-table-cell u-table-cell-19">
+      <button onclick="addAnnouncement()">Add</button>
+    </td>
+  </tr>
+  <script>
+    function addAnnouncement() {
+      // Get input field values
+      var announcementId = document.getElementById('announcementId').value;
+      var date = document.getElementById('date').value;
+      var description = document.getElementById('description').value;
+  
+      // Create a new table row
+      var newRow = document.createElement('tr');
+  
+      // Create cells for each column
+      var idCell = document.createElement('td');
+      idCell.className = 'u-border-4 u-border-grey-80 u-table-cell';
+      idCell.textContent = announcementId;
+  
+      var dateCell = document.createElement('td');
+      dateCell.className = 'u-border-4 u-border-grey-80 u-table-cell';
+      dateCell.textContent = date;
+  
+      var descCell = document.createElement('td');
+      descCell.className = 'u-border-4 u-border-grey-80 u-table-cell';
+      descCell.textContent = description;
+  
+      // Append cells to the new row
+      newRow.appendChild(idCell);
+      newRow.appendChild(dateCell);
+      newRow.appendChild(descCell);
+  
+      // Append the new row to the table body
+      var tableBody = document.querySelector('.u-table-body-1');
+      tableBody.appendChild(newRow);
+    }
+  </script>
+  
+  

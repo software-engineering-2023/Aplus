@@ -1,0 +1,166 @@
+ .u-section-1 {
+  background-image: linear-gradient(white, #999999);
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 1089px;
+}
+
+.u-section-1 .u-text-1 {
+  font-style: italic;
+  font-weight: 700;
+  margin: 71px auto 0;
+}
+
+.u-section-1 .u-table-1 {
+  width: 1061px;
+  margin: 71px auto 0;
+}
+
+.u-section-1 .u-table-entity-1 {
+  min-height: 100px;
+}
+
+.u-section-1 .u-table-header-1 {
+  font-weight: 700;
+  background-image: none;
+  font-style: italic;
+  font-size: 1.1875rem;
+}
+
+.u-section-1 .u-table-cell-1 {
+  border-style: solid;
+}
+
+.u-section-1 .u-table-cell-2 {
+  border-style: solid;
+}
+
+.u-section-1 .u-table-cell-3 {
+  border-style: solid;
+}
+
+.u-section-1 .u-table-cell-4 {
+  border-style: solid;
+}
+
+.u-section-1 .u-table-body-1 {
+  font-weight: 500;
+}
+
+.u-section-1 .u-table-cell-5 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-6 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-7 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-8 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-9 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-10 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-11 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-12 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-13 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-14 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-15 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-16 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-17 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-18 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-19 {
+  border-style: double;
+}
+
+.u-section-1 .u-table-cell-20 {
+  border-style: double;
+}
+
+.u-section-1 .u-btn-1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  background-image: none;
+  margin: 71px auto 0 71px;
+  padding: 27px 30px;
+}
+
+.u-section-1 .u-btn-2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  background-image: none;
+  margin: -76px 71px 60px auto;
+  padding: 27px 30px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-table-1 {
+    width: 940px;
+    height: 654px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-table-1 {
+    width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-table-1 {
+    width: 540px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-table-1 {
+    width: 340px;
+  }
+}
