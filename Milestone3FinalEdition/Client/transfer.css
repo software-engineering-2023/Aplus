@@ -1,0 +1,207 @@
+ .u-section-1 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/tech-daily-pz_L0YpSVvE-unsplash.jpg");
+  background-position: 50% 50%;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 790px;
+}
+
+.u-section-1 .u-text-1 {
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  --animation-custom_in-translate_x: -300px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 0.3;
+  font-size: 3.75rem;
+  margin: 72px auto 0;
+}
+
+.u-section-1 .u-list-1 {
+  grid-template-rows: auto;
+  margin-top: 178px;
+  margin-bottom: 60px;
+}
+
+.u-section-1 .u-repeater-1 {
+  grid-template-columns: repeat(4, calc(25% - 23.25px));
+  min-height: 222px;
+  grid-gap: 31px;
+}
+
+.u-section-1 .u-list-item-1 {
+  background-image: none;
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 300px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 0.3;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 20px 30px;
+}
+
+.u-section-1 .u-icon-1 {
+  height: 106px;
+  width: 106px;
+  background-image: none;
+  margin: 13px auto 0;
+  padding: 9px;
+}
+
+.u-section-1 .u-text-2 {
+  margin: 0;
+}
+
+.u-section-1 .u-list-item-2 {
+  background-image: none;
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 300px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 0.3;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 20px 30px;
+}
+
+.u-section-1 .u-icon-2 {
+  height: 106px;
+  width: 106px;
+  background-image: none;
+  margin: 13px auto 0;
+  padding: 9px;
+}
+
+.u-section-1 .u-text-3 {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.u-section-1 .u-list-item-3 {
+  background-image: none;
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 300px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 0.3;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+}
+
+.u-section-1 .u-container-layout-3 {
+  padding: 20px 30px;
+}
+
+.u-section-1 .u-icon-3 {
+  height: 106px;
+  width: 106px;
+  background-image: none;
+  margin: 13px auto 0;
+  padding: 9px;
+}
+
+.u-section-1 .u-text-4 {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.u-section-1 .u-list-item-4 {
+  background-image: none;
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 300px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 0.3;
+  box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
+}
+
+.u-section-1 .u-container-layout-4 {
+  padding: 20px 30px;
+}
+
+.u-section-1 .u-icon-4 {
+  height: 106px;
+  width: 106px;
+  background-image: none;
+  margin: 13px auto 0;
+  padding: 9px;
+}
+
+.u-section-1 .u-text-5 {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 651px;
+  }
+
+  .u-section-1 .u-repeater-1 {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 988px;
+  }
+
+  .u-section-1 .u-repeater-1 {
+    grid-template-columns: repeat(2, calc(50% - 15.5px));
+    min-height: 454px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 425px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-container-layout-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-container-layout-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 1422px;
+  }
+
+  .u-section-1 .u-repeater-1 {
+    grid-template-columns: 100%;
+  }
+
+  .u-section-1 .u-text-3 {
+    font-size: 1.25rem;
+  }
+
+  .u-section-1 .u-text-4 {
+    font-size: 1.25rem;
+  }
+
+  .u-section-1 .u-text-5 {
+    font-size: 1.25rem;
+  }
+}
